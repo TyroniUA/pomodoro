@@ -1,5 +1,10 @@
 import React from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faStop } from '@fortawesome/free-solid-svg-icons'
+import { faRedo } from '@fortawesome/free-solid-svg-icons'
 class TableofSettings extends React.Component {
 
 
@@ -8,10 +13,10 @@ class TableofSettings extends React.Component {
             <section id={this.props.sectionID}>
                 <h3>{this.props.title}</h3>
                 <div id={this.props.ID}>
-                    <button id={this.props.minusID} value='-' onClick={this.props.method1} >{this.props.minName}
+                    <button id={this.props.minusID} value='-' onClick={this.props.method1} ><FontAwesomeIcon icon ={faArrowUp}/>
                     </button>
                     <div id={this.props.breakID}>{this.props.breakLength}</div>
-                    <button id={this.props.plusID} onClick={this.props.method2} >{this.props.plusName}
+                    <button id={this.props.plusID} onClick={this.props.method2} ><FontAwesomeIcon icon ={faArrowDown}/>
                     </button>
 
                 </div>
@@ -195,6 +200,7 @@ class Pomodoro extends React.Component {
     render() {
         return (
             <div id='pomodoro'>
+                <h1>POMODORO CLOCK</h1>
                 <div id='tables'>
                     <TableofSettings ID='break-label'
                         sectionID='break-name'
@@ -223,16 +229,16 @@ class Pomodoro extends React.Component {
                 <div id='timer-label'>
                     {this.state.isSession === true ? 'Session' : 'Break'}
                     <div id='time-left'>
-                        <span>{this.state.timerMinute < 10 ? '0' + this.state.timerMinute 
+                        <span id='timer'>{this.state.timerMinute < 10 ? '0' + this.state.timerMinute 
                         :  this.state.timerMinute}</span>
                         <span>:</span>
-                        <span>{this.state.timerSecond === 0 ? '00'
+                        <span id='timer'>{this.state.timerSecond === 0 ? '00'
                             : this.state.timerSecond < 10 ? '0' + this.state.timerSecond
                                 : this.state.timerSecond}
                         </span>
                     </div>
-    <button id='start_stop' onClick={this.Play}>{this.state.running === false? 'Start' :'Stop'}</button>
-                    <button id='reset' onClick={this.Reset} >Reset</button>
+    <button id='start_stop' onClick={this.Play}>{this.state.running === false? <FontAwesomeIcon icon={faPlay}/> :<FontAwesomeIcon icon={faStop}/>}</button>
+                    <button id='reset' onClick={this.Reset} ><FontAwesomeIcon icon={faRedo}/></button>
                 </div>
                 <audio id="beep" preload="auto" 
           src="https://goo.gl/65cBl1"

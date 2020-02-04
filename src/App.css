@@ -2,7 +2,9 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
+  background: #1E555C;
+  font-family: Righteous;
 }
 
 #pomodoro{
@@ -19,22 +21,28 @@
 }
 #session-label, #break-label{
   display: flex;
-  font: 500 2rem Roboto;
+  font: 500 2rem DS-Digital;
   padding: 10px 12px;
   align-items: center;
   margin: 10px 40px;
+  color: white;
+}
+h1{
+  color: white;
+  text-align: center;
 }
 h3{
-  font: 600 2rem Montserrat;
+  font: 600 2rem Righteous;
+  color: white;
 }
 #timer-label{
-  background-color: #2d4a9c;
+  border: 6px solid rgba(255,255,255, 0.6);
   
   padding: 20px;
   color: white;
-  font: 700 2rem Montserrat;
+  font: 700 2rem Righteous;
   margin: 30px auto;
-  width: 500px;
+  width: 350px;
   border-radius: 10px;
 }
 #time-left{ 
@@ -42,12 +50,16 @@ h3{
   margin: 20px;
 }
 button{
-  padding: 5px 12px;
-  width: 80px;
-  margin: 0 30px;
-  font: 500 1.5rem Montserrat;
+  width: 40px;
+  margin: 5px;
+  font: 900 2rem Righteous;
   color: white;
-  background-color: rgba(93,174,255, 0.9);
+  background-color: rgba(59, 108, 156, 0.0);
   border: none;
   border-radius: 3px;
+
+}
+#timer{
+  
+  font: 900 4rem DS-Digital
 }
