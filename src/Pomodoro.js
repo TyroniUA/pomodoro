@@ -5,6 +5,9 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faStop } from '@fortawesome/free-solid-svg-icons'
 import { faRedo } from '@fortawesome/free-solid-svg-icons'
+import './fonts/DS-DIGI.TTF'
+
+
 class TableofSettings extends React.Component {
 
 
@@ -13,10 +16,10 @@ class TableofSettings extends React.Component {
             <section id={this.props.sectionID}>
                 <h3>{this.props.title}</h3>
                 <div id={this.props.ID}>
-                    <button id={this.props.minusID} value='-' onClick={this.props.method1} ><FontAwesomeIcon icon ={faArrowUp}/>
+                    <button id={this.props.minusID} value='-' onClick={this.props.method1} ><FontAwesomeIcon icon ={faArrowDown}/>
                     </button>
                     <div id={this.props.breakID}>{this.props.breakLength}</div>
-                    <button id={this.props.plusID} onClick={this.props.method2} ><FontAwesomeIcon icon ={faArrowDown}/>
+                    <button id={this.props.plusID} onClick={this.props.method2} ><FontAwesomeIcon icon ={faArrowUp}/>
                     </button>
 
                 </div>
